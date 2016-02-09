@@ -1,6 +1,6 @@
 {
-  "name": "webpack-harkka",
-  "version": "1.0.0",
+  "name": "webpack-react-project-template",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
