@@ -20,8 +20,6 @@
     "json-loader": "0.5.4",
     "react": "0.14.7",
     "react-dom": "0.14.7",
-    "wdio-dot-reporter": "0.0.5",
-    "wdio-jasmine-framework": "0.1.5",
     "webdriverio": "4.0.3",
     "webpack": "1.12.13",
     "webpack-dev-server": "1.14.1"
