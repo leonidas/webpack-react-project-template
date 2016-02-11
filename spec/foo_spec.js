@@ -7,6 +7,6 @@ describe("foo", () => {
       .url('http://localhost:8080')
       .getText('#root');
 
-    expect(text).toContain("bork");
+    expect(text).toContain("JSON");
   });
 });

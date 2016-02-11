@@ -3,7 +3,10 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'eval-source-map',
-  entry: __dirname + "/app/main.js",
+  entry: {
+    app: __dirname + "/app/main.js",
+    vendor: ['react', 'react-dom']
+  },
   output: {
     path: __dirname + "/build",
     filename: "bundle.js"
@@ -24,7 +27,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: __dirname + "/app/index.tmpl.html"
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
   ],
 
   devServer: {

@@ -5,7 +5,10 @@ var CompressionPlugin = require("compression-webpack-plugin");
 
 
 module.exports = {
-  entry: __dirname + "/app/main.js",
+  entry: {
+    app: __dirname + "/app/main.js",
+    vendor: ['react', 'react-dom']
+  },
   output: {
     path: __dirname + "/build",
     filename: "[name]-[hash].js"
@@ -36,6 +39,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: __dirname + "/app/index.tmpl.html"
     }),
+    new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor-[hash].js"),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextPlugin("[name]-[hash].css"),

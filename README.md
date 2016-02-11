@@ -12,6 +12,8 @@ Based on [Pro React, Appendix A: Webpack for React](http://www.pro-react.com/mat
 ## Project structure
 
 * `app/` – Front-end source code (ES2015/JSX, CSS)
+* `build/` – Built files
+* `spec/` – Jasmine tests
 
 ## Getting started
 
@@ -43,3 +45,5 @@ Based on [Pro React, Appendix A: Webpack for React](http://www.pro-react.com/mat
 
 * Add a server and proxy some endpoints to it
 * Start the required server components from `npm test`
+* Redux
+* Clean old files from `build/`
